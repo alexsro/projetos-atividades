@@ -4,7 +4,7 @@
 
 &nbsp;&nbsp;  Backend of project "projetos - atividades"
 
-&nbsp;&nbsp;  Made in Nodejs using typescript, typeorm, postgres, docker and jest for testing
+&nbsp;&nbsp;  Made in Nodejs using typescript, typeorm, postgres, docker, yup for validations and jest for testing. 
 
 &nbsp;&nbsp;  Example of docker container creation: docker run --name project_db -e POSTGRES_PASSWORD=123 -p 5432:5432 -d postgres
 
