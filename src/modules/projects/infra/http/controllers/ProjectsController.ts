@@ -3,6 +3,7 @@ import { container } from 'tsyringe';
 
 import ListProjectsService from '@modules/projects/services/ListProjectsService';
 import ListProjectService from '@modules/projects/services/ListProjectService';
+import ListProjectsWithStatsService from '@modules/projects/services/ListProjectsWithStatsService';
 import CreateProjectService from '@modules/projects/services/CreateProjectService';
 
 export default class ProjectsController {
@@ -41,5 +42,15 @@ export default class ProjectsController {
     });
 
     return response.send(project);
+  }
+
+  public async stats(request: Request, response: Response): Promise<Response> {
+    const listProjectsWithStats = container.resolve(
+      ListProjectsWithStatsService,
+    );
+
+    const projects = await listProjectsWithStats.execute();
+
+    return response.send(projects);
   }
 }

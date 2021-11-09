@@ -4,7 +4,7 @@
 
 &nbsp;&nbsp;  Backend of project "projetos - atividades"
 
-&nbsp;&nbsp;  Made in nodejs using typescript, typeorm, postgres, docker and jest for testing
+&nbsp;&nbsp;  Made in Nodejs using typescript, typeorm, postgres, docker and jest for testing
 
 &nbsp;&nbsp;  Example of docker container creation: docker run --name project_db -e POSTGRES_PASSWORD=123 -p 5432:5432 -d postgres
 
@@ -19,5 +19,7 @@
     Test all possibles cases with jest
   - ## yarn dev:server
     Run the server
+  - ## yarn typeorm migration:run
+    Execute migrations in aplication database
 
 -------------------------------------------------
